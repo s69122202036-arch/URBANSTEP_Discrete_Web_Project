@@ -1,13 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>E-Ticket — JERSEY LAB</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Ticket — URBANSTEP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body data-page="ticket">
-  <div id="app"></div>
-  <script src="app.js"></script>
+<body>
+<header class="nav"><a class="brand" href="index.html"><span class="brand-mark">U</span><span>URBANSTEP</span></a><nav><a href="index.html">Shop</a><a href="routes.html">Route Finder</a><a href="detail.html">Order Detail</a><a class="active" href="ticket.html">E-Ticket</a></nav><button class="cart-btn" onclick="showCart()">Bag <span id="cartCount">0</span></button></header>
+<main class="page">
+<div class="page-title"><div><div class="eyebrow">03 / E-TICKET</div><h1>Your route is ready.</h1><p>ตั๋วตัวอย่างจากผลรวม Weight บน Shortest Path</p></div><div class="pill">DEMO TICKET</div></div>
+<div class="ticket-wrap">
+<section class="ticket">
+<div class="ticket-top"><div><span class="brand-small">URBANSTEP</span><h2>DELIVERY PASS</h2></div><div class="ticket-status">CONFIRMED</div></div>
+<div class="ticket-route"><div><small>FROM</small><b>Central Warehouse</b><span>W</span></div><div class="arrow">→</div><div><small>TO</small><b>Siam Store</b><span>A</span></div></div>
+<div class="ticket-meta"><div><small>DATE</small><b>27 SEP 2026</b></div><div><small>PATH</small><b>W → N → A</b></div><div><small>TIME</small><b>10 MIN</b></div><div><small>FARE</small><b>฿43</b></div></div>
+<div class="ticket-bottom"><div><div class="barcode"></div><small>Ticket ID · US-260927-1048</small></div><div class="qr"><span>▦</span></div></div>
+</section>
+<section class="fare-card">
+<div class="section-mini"><span>WEIGHT SUMMARY</span><span>Σ w(e)</span></div>
+<div class="fare-row"><span>W → N</span><b>฿25</b><small>6 min</small></div>
+<div class="fare-row"><span>N → A</span><b>฿18</b><small>4 min</small></div>
+<div class="fare-total"><span>Total Weight</span><b>฿43</b></div>
+<p>ยอดรวมนี้เกิดจากการสะสม Weight ของทุก Edge บน Path ที่ Dijkstra เลือก ไม่ใช่ค่าที่กำหนดตายตัว</p>
+<a class="secondary full" href="index.html">Continue shopping</a>
+</section>
+</div>
+<div class="notice"><b>หมายเหตุสำหรับการนำเสนอ:</b> QR และ Ticket ID เป็นข้อมูลจำลองเพื่อสาธิตการทำงานของ Web Application เท่านั้น</div>
+</main>
+<footer><span>© 2026 URBANSTEP</span><span>Shortest Path → Total Weight → E-Ticket</span></footer>
+<script src="app.js"></script>
 </body>
 </html>

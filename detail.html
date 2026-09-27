@@ -1,13 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Order Detail — JERSEY LAB</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Detail — URBANSTEP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body data-page="detail">
-  <div id="app"></div>
-  <script src="app.js"></script>
+<body>
+<header class="nav"><a class="brand" href="index.html"><span class="brand-mark">U</span><span>URBANSTEP</span></a><nav><a href="index.html">Shop</a><a href="routes.html">Route Finder</a><a class="active" href="detail.html">Order Detail</a><a href="ticket.html">E-Ticket</a></nav><button class="cart-btn" onclick="showCart()">Bag <span id="cartCount">0</span></button></header>
+<main class="page">
+<div class="page-title"><div><div class="eyebrow">02 / ORDER DETAIL</div><h1>Your journey, step by step.</h1><p>Path ที่ได้จาก Dijkstra ถูกแปลงเป็น itinerary ที่อ่านง่าย</p></div><div class="pill">PATH ·  W → N → A</div></div>
+<section class="detail-grid">
+<div class="itinerary">
+<div class="journey-head"><div><span class="eyebrow">SELECTED PATH</span><h2>Central Warehouse → Siam Store</h2></div><div class="route-price">฿22</div></div>
+<div class="path-line">
+<div class="stop"><span class="stop-dot"></span><div><b>Central Warehouse</b><small>Origin · Vertex W</small></div></div>
+<div class="segment"><span>6 min · ฿25</span></div>
+<div class="stop"><span class="stop-dot"></span><div><b>North Hub</b><small>Transfer point · Vertex N</small></div></div>
+<div class="segment"><span>4 min · ฿18</span></div>
+<div class="stop"><span class="stop-dot end"></span><div><b>Siam Store</b><small>Destination · Leaf A</small></div></div>
+</div>
+<div class="info-row"><div><span>Total time</span><b>10 min</b></div><div><span>Edges</span><b>2</b></div><div><span>Path length</span><b>3 vertices</b></div></div>
+</div>
+<div class="visual-card">
+<div class="section-mini"><span>PATH VISUALIZATION</span><span>G = (V, E)</span></div>
+<div class="big-path"><div class="bp-node active">W</div><div class="bp-edge active"></div><div class="bp-node active">N</div><div class="bp-edge active"></div><div class="bp-node active">A</div></div>
+<div class="path-code">W → N → A</div>
+<p>Path คือ sequence ของ Vertex ที่แต่ละคู่ติดกันเชื่อมด้วย Edge ในกราฟเดียวกัน</p>
+</div>
+</section>
+<section class="order-card">
+<div><div class="eyebrow">READY TO CHECK OUT?</div><h2>ยืนยันเส้นทางและสร้าง e-Ticket</h2><p>ข้อมูลทั้งหมดเป็นระบบจำลองสำหรับโครงงาน ไม่ใช่การชำระเงินจริง</p></div>
+<div class="order-actions"><a class="secondary" href="routes.html">Back to routes</a><button class="primary" onclick="confirmTicket()">Buy this route →</button></div>
+</section>
+</main>
+<footer><span>© 2026 URBANSTEP</span><span>Path + Tree integration</span></footer>
+<script src="app.js"></script>
 </body>
 </html>

@@ -1,13 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JERSEY LAB — Football Shirt Store</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URBANSTEP — Premium Sneaker Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body data-page="home">
-  <div id="app"></div>
-  <script src="app.js"></script>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html"><span class="brand-mark">U</span><span>URBANSTEP</span></a>
+  <nav>
+    <a class="active" href="index.html">Shop</a>
+    <a href="routes.html">Route Finder</a>
+    <a href="detail.html">Order Detail</a>
+    <a href="ticket.html">E-Ticket</a>
+  </nav>
+  <button class="cart-btn" onclick="showCart()">Bag <span id="cartCount">0</span></button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">SPRING / SUMMER 2026</div>
+    <h1>Move in<br><em>your own</em> way.</h1>
+    <p>รองเท้าและไลฟ์สไตล์คอลเลกชันใหม่ คัดเลือกจากดีไซน์ที่ใส่ได้จริงทุกวัน พร้อมระบบค้นหาเส้นทางการสั่งซื้อด้วย Graph Theory</p>
+    <a class="primary" href="#products">Explore collection <span>→</span></a>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-orb"></div>
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1100&q=85" alt="Premium sneaker">
+    <div class="floating-card"><small>NEW DROP</small><strong>Velocity 01</strong><span>฿3,490</span></div>
+  </div>
+</section>
+
+<section class="trust">
+  <div><b>01</b><span>Curated products</span></div>
+  <div><b>24H</b><span>Fast dispatch</span></div>
+  <div><b>30D</b><span>Easy returns</span></div>
+  <div><b>100%</b><span>Demo checkout</span></div>
+</section>
+
+<section class="section" id="products">
+  <div class="section-head">
+    <div><div class="eyebrow">CURATED FOR YOU</div><h2>Featured products</h2></div>
+    <div class="filter-row">
+      <button class="filter active" data-cat="all">All</button>
+      <button class="filter" data-cat="running">Running</button>
+      <button class="filter" data-cat="lifestyle">Lifestyle</button>
+      <button class="filter" data-cat="classic">Classic</button>
+    </div>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<section class="math-banner">
+  <div>
+    <div class="eyebrow">DISCRETE MATHEMATICS IN ACTION</div>
+    <h2>Shopping becomes a graph.</h2>
+    <p>สินค้าและจุดรับส่งถูกแทนเป็น Vertex ส่วนความสัมพันธ์ระหว่างจุดเป็น Edge ที่มี Weight ระบบใช้ Weighted Graph และ Dijkstra เพื่อหาเส้นทางต้นทุนต่ำสุด</p>
+  </div>
+  <a class="secondary" href="routes.html">Open Route Finder →</a>
+</section>
+</main>
+
+<footer><span>© 2026 URBANSTEP</span><span>Interactive Web Application · Graph Theory + Tree</span></footer>
+<script src="app.js"></script>
+<script>renderProducts();</script>
 </body>
 </html>
